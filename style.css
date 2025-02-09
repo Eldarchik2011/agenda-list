@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 68, 68);
+    
+}
+.wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(170%);
+    background-image: url(img/mountain_landscape_with_sunbeam_during_sunrise_4k_hd_nature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.651);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+   transition: 0.5s;
+}
+
+.container {
+    min-height: 25%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.819);
+ padding: 10px;
+width: 400px;
+
+box-shadow: 0px 00px 15px 10px;
+border: 2px solid white;
+border-radius: 15px;
+}
+
+  
+.list {
+    margin:10px 0px ;
+    width: 216px;
+
+
+    width: 100%;
+    
+   
+    padding: 10px 0px;
+}
+    
+    
+
+.newdelbtn {
+    height: 100%;
+    border: none;
+background-color: rgba(240, 248, 255, 0);
+margin-right: 5px;
+}
+
+.input-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.477);
+    margin: 10px 0px;
+    color: white;
+    padding: 10px 0px;
+padding-left: 10px;
+border: 1px solid white;
+border-radius: 10px;
+}
+
+
+.nameinput {
+    border: none;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+.mybtn {
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+ .modal_w {
+        width: 170px;
+        background-color: rgba(0, 0, 0, 0.462);
+    margin: 0 auto;
+    border: 2px white solid;
+    padding: 10px;
+    box-shadow: 0px 00px 10px;
+    border-radius: 10px;
+    margin-top: 21%;
+  }
+  .modal_msg {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+  }
+.modal-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.modal-btn-red, .modal-btn-green {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+    width: 40%;
+}
+
+.modal-btn-red:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.093);
+    transition: 0.5s;
+    color: rgb(231, 231, 231);
+}
+.modal-btn-green:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 255, 0, 0.074);
+    transition: 0.5s;
+    color: rgb(231, 231, 231);
+}
+
+
+.item.done{
+    text-decoration: line-through;
+  }
