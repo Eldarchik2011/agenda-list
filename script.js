@@ -1,6 +1,8 @@
 let list = document.querySelector('#list');
 let mybtn = document.querySelector('#myBtn');
 let nameInput = document.querySelector('#nameInput');
+let wrapper = document.querySelector('.wrapper');
+let modalw = document.querySelector('.modal_w');
 
 mybtn.addEventListener('click', addTask);
 
@@ -25,19 +27,31 @@ function addTask() {
         list.appendChild(newitem);
         newitem.appendChild(newdelbtn);
 
-        newdelbtn.addEventListener('click', ()=>{
-            modal.style.display = 'block';
-            modal.style.transition = '1s';
 
+        newdelbtn.addEventListener('click', ()=>{
+            modalw.style.animation ='1s anim-lineUp ease-out forwards';
+            
+            
+            wrapper.style.filter ='grayscale(100%)';
+            wrapper.style.transition = '1s'
+            modal.style.display = 'block';
+            
+            
+            
             function remove() {
                 list.removeChild(newitem);
                 modal.style.display = 'none';
+                modalw.style.animation = '1s opacity ';
+                wrapper.style.filter ='grayscale(0%)';
+                wrapper.style.transition = '1s'
+                
             }
 
             delbtn.addEventListener('click', remove);
 
             cancel.addEventListener('click', ()=> {
                 modal.style.display = 'none';
+                wrapper.style.filter ='grayscale(0%)';
                 delbtn.removeEventListener('click', remove)
             })
         })

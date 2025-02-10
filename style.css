@@ -16,6 +16,7 @@ html, body {
     background-image: url(img/mountain_landscape_with_sunbeam_during_sunrise_4k_hd_nature.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .modal {
@@ -24,9 +25,30 @@ html, body {
     height: 100%;
     width: 100%;
     position: absolute;
-   transition: 0.5s;
+   transition: 1s;
+   
 }
-
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
+  
+    }
+  }
+  @keyframes opacity {
+    100% {
+      opacity: 1;
+  
+    }
+    0% {
+      opacity: 0;
+      
+    }
+    
+  }
 .container {
     min-height: 25%;
     margin: 0 auto;
@@ -37,6 +59,8 @@ min-width: 100px;
 box-shadow: 0px 00px 15px 10px;
 border: 2px solid white;
 border-radius: 15px;
+filter: blur(0px);
+
 }
 
   
@@ -141,6 +165,12 @@ border-radius: 10px;
     text-decoration: line-through;
   }
 
+
+
+  .title {
+    position: absolute;
+    color: white;
+  }
 
 
   
