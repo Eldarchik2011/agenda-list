@@ -18,8 +18,17 @@ function addTask() {
         let delbtn = document.querySelector('#del');
         let cancel = document.querySelector('#canc');
         let newitem = document.createElement('li');
+        let newitemContent = document.createElement('p');
+        newitem.appendChild(newitemContent);
         newitem.classList.add('item')
-        newitem.innerHTML = `<span>${nameInput.value}</span>`;
+        newitemContent.innerHTML = `<span>${nameInput.value}</span>`;
+        newitem.addEventListener('click', ()=>{
+            newitemContent.style.textDecoration = 'line-through'
+            function removeLine() {
+                newitem.style.textDecoration = ''
+            }
+            newitem.addEventListener('click', removeLine())
+        })
         let newdelbtn =document.createElement('button');
         newdelbtn.textContent = 'x';
         newdelbtn.style.color = 'white';
@@ -63,7 +72,7 @@ function addTask() {
     }
 }
 
-newitem.addEventListener('click', (event)=> {
+newitem.addEventListener('click', ()=> {
     newitem.text.style.textDecoration = 'line-through'
     event.stopImmediatePropagation();
 })
