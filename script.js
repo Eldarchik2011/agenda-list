@@ -19,15 +19,17 @@ function addTask() {
         let cancel = document.querySelector('#canc');
         let newitem = document.createElement('li');
         let newitemContent = document.createElement('p');
+        newitemContent.classList.add('newitenContent')
         newitem.appendChild(newitemContent);
         newitem.classList.add('item')
         newitemContent.innerHTML = `<span>${nameInput.value}</span>`;
         newitem.addEventListener('click', ()=>{
-            newitemContent.style.textDecoration = 'line-through'
-            function removeLine() {
-                newitem.style.textDecoration = ''
-            }
-            newitem.addEventListener('click', removeLine())
+            newitem.classList.add('newitem')
+            newitemContent.classList.add('newitem-content')
+            newitem.addEventListener('click', ()=> {
+                newitem.classList.toggle('newitem')
+            newitemContent.classList.toggle('newitem-content')
+            })
         })
         let newdelbtn =document.createElement('button');
         newdelbtn.textContent = 'x';
@@ -41,7 +43,7 @@ function addTask() {
             modalw.style.animation ='1s anim-lineUp ease-out forwards';
             
             
-            wrapper.style.filter ='grayscale(100%)';
+            wrapper.style.filter ='grayscale(70%)';
             wrapper.style.transition = '1s'
             modal.style.display = 'block';
             
@@ -72,7 +74,3 @@ function addTask() {
     }
 }
 
-newitem.addEventListener('click', ()=> {
-    newitem.text.style.textDecoration = 'line-through'
-    event.stopImmediatePropagation();
-})
